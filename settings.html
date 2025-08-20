@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Setting - Coaching Pratistha</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">Pratistha eL</div>
+        <button class="hamburger" aria-label="Toggle sidebar">
+          <div class="bars"><span></span><span></span><span></span></div>
+        </button>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" title="Dashboard"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+        <a href="organic.html" title="Organic"><span class="icon">🧪</span><span class="label">Organic</span></a>
+        <a href="inorganic.html" title="Inorganic"><span class="icon">🧫</span><span class="label">Inorganic</span></a>
+        <a href="physical.html" title="Physical"><span class="icon">⚗️</span><span class="label">Physical</span></a>
+        <a href="part-a.html" title="Part A"><span class="icon">🧩</span><span class="label">Part A</span></a>
+        <div class="menu">
+          <button class="menu-toggle" aria-expanded="false" title="Book">
+            <span class="icon">📚</span>
+            <span class="label">Book</span>
+            <span class="caret">▾</span>
+          </button>
+          <div class="submenu" role="group" aria-label="Book sections">
+            <a href="book-organic.html" title="Book • Organic">Organic</a>
+            <a href="book-inorganic.html" title="Book • Inorganic">Inorganic</a>
+            <a href="book-physical.html" title="Book • Physical">Physical</a>
+          </div>
+        </div>
+        <div class="menu">
+          <button class="menu-toggle" aria-expanded="false" title="Ques">
+            <span class="icon">❓</span>
+            <span class="label">Ques</span>
+            <span class="caret">▾</span>
+          </button>
+          <div class="submenu" role="group" aria-label="Ques sections">
+            <a href="ques-organic.html" title="Ques • Organic">Organic</a>
+            <a href="ques-inorganic.html" title="Ques • Inorganic">Inorganic</a>
+            <a href="ques-physical.html" title="Ques • Physical">Physical</a>
+          </div>
+        </div>
+        <a href="trick-videos.html" title="Trick videos"><span class="icon">🎥</span><span class="label">Trick videos</span></a>
+        <a href="short-hand.html" title="Short-Hand"><span class="icon">✍️</span><span class="label">Short-Hand</span></a>
+        <a href="settings.html" title="Setting"><span class="icon">⚙️</span><span class="label">Setting</span></a>
+      </nav>
+      <div class="footer">© 2025 Coaching Pratistha</div>
+    </aside>
+
+    <header class="header">
+      <div class="page-title">Setting</div>
+      <div id="dashboard-clock" class="clock" aria-live="polite" title="Local time">--:--:--</div>
+      <div id="dashboard-stopwatch" class="stopwatch" aria-label="Study timer">
+        <span class="sw-time" aria-live="polite">00:00:00</span>
+        <div class="sw-actions">
+          <button class="sw-btn sw-start" aria-label="Start stopwatch">Start</button>
+          <button class="sw-btn sw-stop" aria-label="Stop stopwatch">Stop</button>
+          <button class="sw-btn sw-reset" aria-label="Reset stopwatch" title="Reset">↺</button>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="search-wrap">
+        <input type="search" placeholder="Search..." aria-label="Search" />
+        <select aria-label="Filter">
+          <option>All</option>
+          <option>Notes</option>
+          <option>Videos</option>
+          <option>Questions</option>
+        </select>
+        <div class="theme-toggle" role="tablist" aria-label="Theme">
+          <button data-theme="day" class="active" aria-label="Day mode">🌞</button>
+          <button data-theme="night" aria-label="Night mode">🌙</button>
+          <button data-theme="cb" aria-label="Color-blind mode">♿</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <form id="settings-form" class="settings-form">
+          <h2 style="margin:0 0 12px 0;">Preferences</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <label>
+              <div>Theme</div>
+              <select id="setting-theme">
+                <option value="day">Day (Light)</option>
+                <option value="night">Night (Dark)</option>
+                <option value="cb">Colour-blind Friendly</option>
+              </select>
+            </label>
+            <label>
+              <div>Text size</div>
+              <input id="setting-text" type="range" min="0.85" max="1.3" step="0.05" />
+            </label>
+            <label>
+              <div>Background color</div>
+              <input id="setting-bg" type="color" />
+            </label>
+            <label>
+              <div>Font color (solid)</div>
+              <select id="setting-text-color">
+                <option value="default">Theme default</option>
+                <option value="black">Black</option>
+                <option value="slate">Slate</option>
+                <option value="gray">Dark gray</option>
+                <option value="navy">Navy</option>
+                <option value="blue">Blue</option>
+                <option value="teal">Teal</option>
+                <option value="green">Green</option>
+                <option value="emerald">Emerald</option>
+                <option value="olive">Olive</option>
+                <option value="red">Red</option>
+                <option value="maroon">Maroon</option>
+                <option value="orange">Orange</option>
+                <option value="brown">Brown</option>
+                <option value="purple">Purple</option>
+                <option value="indigo">Indigo</option>
+              </select>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-sidebar" type="checkbox" />
+              <span>Sidebar collapsed by default</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-hide-images" type="checkbox" />
+              <span>Hide images in cards</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-compact-header" type="checkbox" />
+              <span>Compact header height</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-no-sticky-header" type="checkbox" />
+              <span>Disable sticky header</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-flat-cards" type="checkbox" />
+              <span>Flat cards (no shadow)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-reduce-motion" type="checkbox" />
+              <span>Reduce motion (no animations)</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-hide-search" type="checkbox" />
+              <span>Hide search bar</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;padding-top:18px;">
+              <input id="setting-dense-ui" type="checkbox" />
+              <span>Dense UI (compact paddings)</span>
+            </label>
+            <label>
+              <div>Cards per row</div>
+              <select id="setting-cpr">
+                <option value="5">5 per row (default)</option>
+                <option value="4">4 per row</option>
+                <option value="3">3 per row</option>
+                <option value="2">2 per row</option>
+              </select>
+            </label>
+            <label>
+              <div>Thumbnail size</div>
+              <select id="setting-thumb">
+                <option value="normal">Normal</option>
+                <option value="sm">Small</option>
+                <option value="lg">Large</option>
+              </select>
+            </label>
+            <label>
+              <div>Card corner radius</div>
+              <input id="setting-radius" type="range" min="6" max="22" step="1" />
+            </label>
+            <label>
+              <div>Section spacing (gap between sections)</div>
+              <input id="setting-section-gap" type="range" min="4" max="40" step="1" />
+            </label>
+            <label>
+              <div>Page padding (outside the sections: left/top/right/bottom)</div>
+              <input id="setting-page-padding" type="range" min="0" max="30" step="1" />
+            </label>
+            <label>
+              <div>Sidebar icon size (px)</div>
+              <input id="setting-icon-size" type="range" min="16" max="34" step="1" />
+            </label>
+          </div>
+          <p style="color:var(--muted);margin-top:10px;">Changes are saved automatically and applied across pages.</p>
+        </form>
+      </section>
+      <section class="panel" aria-labelledby="about-title">
+        <h2 id="about-title" style="margin:0 0 12px 0;">About Me</h2>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+          <div aria-hidden="true">
+            <img src="image/profile.jpg" alt="profile" style="width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;background:linear-gradient(135deg, var(--primary), var(--accent));">
+          </div>
+          <div style="flex:1;min-width:240px;">
+            <div style="font-weight:700;font-size:16px;">Coaching CSIR NET</div>
+            <div style="color:var(--muted);font-size:14px;">Instructor • Chemistry • Student Success</div>
+            <p style="margin:8px 0 0 0;color:var(--text);font-size:14px;">
+              Passionate about making Chemistry clear, practical, and enjoyable. This platform hosts notes, question banks, and quick tricks to boost your learning.
+            </p>
+            <p style="margin:8px 0 0 0;color:var(--muted);font-size:13px;">
+              Contact: <a href="#" style="color:var(--primary);text-decoration:none;">jonahkamei42@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Removed cards section for Settings page -->
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
